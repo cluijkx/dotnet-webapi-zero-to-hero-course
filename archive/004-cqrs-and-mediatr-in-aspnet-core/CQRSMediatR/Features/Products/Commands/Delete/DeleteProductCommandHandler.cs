@@ -3,13 +3,21 @@ using MediatR;
 
 namespace CQRSMediatR.Features.Products.Commands.Delete;
 
-public class DeleteProductCommandHandler(AppDbContext context) : IRequestHandler<DeleteProductCommand>
+public class DeleteProductCommandHandler(AppDbContext context) : IRequestHandler<DeleteProductCommand, bool>
 {
-    public async Task Handle(DeleteProductCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
     {
-        var product = await context.Products.FindAsync(request.Id);
-        if (product is null) return;
+        Domain.Product? product = await context.Products.FindAsync([command.Id], cancellationToken: cancellationToken);
+
+        if (product is null)
+        {
+            return false;
+        }
+
         context.Products.Remove(product);
-        await context.SaveChangesAsync();
+
+        await context.SaveChangesAsync(cancellationToken);
+
+        return true;
     }
 }

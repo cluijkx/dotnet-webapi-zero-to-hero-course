@@ -1,16 +1,19 @@
 ﻿using CQRSMediatR.Domain;
+using CQRSMediatR.Features.Products.DTOs;
 using CQRSMediatR.Persistence;
 using MediatR;
 
 namespace CQRSMediatR.Features.Products.Commands.Create;
 
-public class CreateProductCommandHandler(AppDbContext context) : IRequestHandler<CreateProductCommand, Guid>
+public class CreateProductCommandHandler(AppDbContext context) : IRequestHandler<CreateProductCommand, ProductDto>
 {
-    public async Task<Guid> Handle(CreateProductCommand command, CancellationToken cancellationToken)
+    public async Task<ProductDto> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-        var product = new Product(command.Name, command.Description, command.Price);
-        await context.Products.AddAsync(product);
-        await context.SaveChangesAsync();
-        return product.Id;
+        Product product = new(command.Name, command.Description, command.Price);
+
+        await context.Products.AddAsync(product, cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
+
+        return new ProductDto(product.Id, product.Name, product.Description, product.Price);
     }
 }

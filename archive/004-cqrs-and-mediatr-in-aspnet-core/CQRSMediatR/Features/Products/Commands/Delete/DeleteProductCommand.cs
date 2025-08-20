@@ -2,4 +2,4 @@
 
 namespace CQRSMediatR.Features.Products.Commands.Delete;
 
-public record DeleteProductCommand(Guid Id) : IRequest;
+public sealed record DeleteProductCommand(Guid Id) : IRequest<bool>;
