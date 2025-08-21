@@ -12,9 +12,15 @@ using System.Reflection;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<AppDbContext>();
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+builder.Services.AddMediatR(configuration =>
+{
+    configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+});
 
 WebApplication app = builder.Build();
 
@@ -86,4 +92,5 @@ app.MapPut("/products/{id:guid}", async (Guid id, UpdateProductCommand command, 
 });
 
 app.UseHttpsRedirection();
+
 app.Run();

@@ -1,6 +1,48 @@
 @MediatRPipelineFluentValidation_HostAddress = http://localhost:5197
 
-GET {{MediatRPipelineFluentValidation_HostAddress}}/weatherforecast/
+### Get all products
+GET {{MediatRPipelineFluentValidation_HostAddress}}/products
+Accept: application/json
+
+### Get a single product by ID (replace with actual Guid)
+GET {{MediatRPipelineFluentValidation_HostAddress}}/products/b0b4f9f1-39f6-44c0-b00c-a32ef57f2617
+Accept: application/json
+
+### Create a new product (valid case)
+POST {{MediatRPipelineFluentValidation_HostAddress}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Tesla Model Y",
+  "description": "Tesla Model Y",
+  "price": 45000
+}
+
+### Create a new product (invalid case - should trigger FluentValidation)
+POST {{MediatRPipelineFluentValidation_HostAddress}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "ab",
+  "description": "",
+  "price": 0
+}
+
+### Update an existing product (replace with actual Guid)
+PUT {{MediatRPipelineFluentValidation_HostAddress}}/products/b0b4f9f1-39f6-44c0-b00c-a32ef57f2617
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Tesla Model Y",
+  "description": "Tesla Model Y",
+  "price": 46000
+}
+
+### Delete a product (replace with actual Guid)
+DELETE {{MediatRPipelineFluentValidation_HostAddress}}/products/b0b4f9f1-39f6-44c0-b00c-a32ef57f2617
 Accept: application/json
 
 ###

@@ -3,4 +3,4 @@ using MediatR;
 
 namespace MediatRPipelineFluentValidation.Features.Products.Queries.List;
 
-public record ListProductsQuery : IRequest<List<ProductDto>>;
+public sealed record ListProductsQuery : IRequest<List<ProductDto>>;

@@ -35,16 +35,16 @@ Global Exception Handling in ASP.NET Core - IExceptionHandler in .NET 8 [Recomme
 
 [21-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\003-fluentvalidation-in-aspnet-core > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\003-fluentvalidation-in-aspnet-core > Commit b078794 improved fluentvalidation example
 
 https://codewithmukesh.com/blog/fluentvalidation-in-aspnet-core
 
 How to use FluentValidation in ASP.NET Core - Super Powerful Validations
 
 
-[??-??-????]
+[21-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\005-validation-with-mediatr-pipeline-behavior-and-fluentvalidation > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\005-validation-with-mediatr-pipeline-behavior-and-fluentvalidation > Commit TODO improved mediatr pipeline fluentvalidation example
 
 https://codewithmukesh.com/blog/validation-with-mediatr-pipeline-behavior-and-fluentvalidation
 

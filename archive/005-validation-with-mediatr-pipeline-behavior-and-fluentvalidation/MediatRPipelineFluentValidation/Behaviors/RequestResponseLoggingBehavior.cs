@@ -9,20 +9,19 @@ public class RequestResponseLoggingBehavior<TRequest, TResponse>(ILogger<Request
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        var correlationId = Guid.NewGuid();
-
         // Request Logging
-        // Serialize the request
-        var requestJson = JsonSerializer.Serialize(request);
-        // Log the serialized request
+        Guid correlationId = Guid.NewGuid();
+
+        string requestJson = JsonSerializer.Serialize(request);
+
         logger.LogInformation("Handling request {CorrelationID}: {Request}", correlationId, requestJson);
 
         // Response logging
-        var response = await next();
-        // Serialize the request
-        var responseJson = JsonSerializer.Serialize(response);
-        // Log the serialized request
-        logger.LogInformation("Response for {Correlation}: {Response}", correlationId, responseJson);
+        TResponse? response = await next();
+
+        string responseJson = JsonSerializer.Serialize(response);
+
+        logger.LogInformation("Response for {CorrelationID}: {Response}", correlationId, responseJson);
 
         // Return response
         return response;

@@ -11,15 +11,17 @@ try
 
     WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-    builder.Host.UseSerilog((context, loggerConfiguration) =>
+    builder.Host.UseSerilog((context, configuration) =>
     {
-        //loggerConfiguration.MinimumLevel.Warning();
-        loggerConfiguration.WriteTo.Console();
-        loggerConfiguration.ReadFrom.Configuration(context.Configuration);
+        //configuration.MinimumLevel.Warning();
+        configuration.WriteTo.Console();
+        configuration.ReadFrom.Configuration(context.Configuration);
     });
 
     builder.Services.AddTransient<IDummyService, DummyService>();
+
     builder.Services.AddEndpointsApiExplorer();
+
     builder.Services.AddSwaggerGen();
 
     WebApplication app = builder.Build();
@@ -31,6 +33,7 @@ try
     }
 
     app.UseSerilogRequestLogging();
+
     app.UseHttpsRedirection();
 
     app.MapGet("/", (IDummyService service) => service.DoSomething());
