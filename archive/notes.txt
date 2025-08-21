@@ -33,7 +33,7 @@ https://codewithmukesh.com/blog/global-exception-handling-in-aspnet-core
 Global Exception Handling in ASP.NET Core - IExceptionHandler in .NET 8 [Recommended]
 
 
-[??-??-????]
+[21-08-2025]
 
 C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\003-fluentvalidation-in-aspnet-core > TODO
 

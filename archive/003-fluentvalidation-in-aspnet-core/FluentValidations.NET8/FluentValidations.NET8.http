@@ -1,6 +1,29 @@
 @FluentValidations.NET8_HostAddress = http://localhost:5056
 
-GET {{FluentValidations.NET8_HostAddress}}/weatherforecast/
+### Try to register with invalid data (should trigger multiple FluentValidation errors)
+POST {{FluentValidations.NET8_HostAddress}}/register
+Content-Type: application/json
 Accept: application/json
+
+{
+  "firstName": "J1",
+  "lastName": "",
+  "email": "invalid-email",
+  "password": "abc123",
+  "confirmPassword": "xyz456"
+}
+
+### Try to register with valid data (should return 202 Accepted)
+POST {{FluentValidations.NET8_HostAddress}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "Secret123!",
+  "confirmPassword": "Secret123!"
+}
 
 ###
