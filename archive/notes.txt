@@ -44,7 +44,7 @@ How to use FluentValidation in ASP.NET Core - Super Powerful Validations
 
 [21-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\005-validation-with-mediatr-pipeline-behavior-and-fluentvalidation > Commit TODO improved mediatr pipeline fluentvalidation example
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\005-validation-with-mediatr-pipeline-behavior-and-fluentvalidation > Commit 5e6fe06 improved mediatr pipeline fluentvalidation example
 
 https://codewithmukesh.com/blog/validation-with-mediatr-pipeline-behavior-and-fluentvalidation
 
