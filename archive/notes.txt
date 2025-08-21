@@ -1,0 +1,25 @@
+[20-08-2025]
+
+004-cqrs-and-mediatr-in-aspnet-core > Commit b7d5d36 improved cqrs mediatr example
+
+https://codewithmukesh.com/blog/cqrs-and-mediatr-in-aspnet-core
+
+CQRS and MediatR in ASP.NET Core - Building Scalable Systems
+
+
+
+[21-08-2025]
+
+001-structured-logging-with-serilog-in-aspnet-core > TODO
+
+https://codewithmukesh.com/blog/structured-logging-with-serilog-in-aspnet-core
+
+Structured Logging with Serilog in ASP.NET Core - The Complete Guide for .NET 8 Applications
+
+View CLEF (Compact Log Event Format) logs
+
+	Step 1. Download and Install Seq, visit https://datalust.co/download
+	Step 2. Start Seq, browse to http://localhost:5341
+	Step 3. Ingest Your CLEF File
+		dotnet tool install --global seqcli
+		seqcli ingest -i "C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\001-structured-logging-with-serilog-in-aspnet-core\Logs\log20250821.clef" --server http://localhost:5341
