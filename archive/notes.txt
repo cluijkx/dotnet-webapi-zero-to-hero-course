@@ -26,7 +26,7 @@ View CLEF (Compact Log Event Format) logs
 
 [21-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\002-global-exception-handling-in-aspnet-core > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\002-global-exception-handling-in-aspnet-core > Commit 1a3e5b7 improved global exception handling example
 
 https://codewithmukesh.com/blog/global-exception-handling-in-aspnet-core
 

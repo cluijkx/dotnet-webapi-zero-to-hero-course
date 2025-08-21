@@ -1,6 +1,7 @@
 @StructuredLogging.WebApi_HostAddress = http://localhost:5174
 
-GET {{StructuredLogging.WebApi_HostAddress}}/weatherforecast/
+### Call DummyService through root endpoint
+GET {{StructuredLogging.WebApi_HostAddress}}/
 Accept: application/json
 
 ###
