@@ -7,10 +7,9 @@ https://codewithmukesh.com/blog/cqrs-and-mediatr-in-aspnet-core
 CQRS and MediatR in ASP.NET Core - Building Scalable Systems
 
 
-
 [21-08-2025]
 
-001-structured-logging-with-serilog-in-aspnet-core > TODO
+001-structured-logging-with-serilog-in-aspnet-core > Commit 31cd3cd improved serilog example + added notes for using SEQ
 
 https://codewithmukesh.com/blog/structured-logging-with-serilog-in-aspnet-core
 
@@ -23,3 +22,79 @@ View CLEF (Compact Log Event Format) logs
 	Step 3. Ingest Your CLEF File
 		dotnet tool install --global seqcli
 		seqcli ingest -i "C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\001-structured-logging-with-serilog-in-aspnet-core\Logs\log20250821.clef" --server http://localhost:5341
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\002-global-exception-handling-in-aspnet-core > TODO
+
+https://codewithmukesh.com/blog/global-exception-handling-in-aspnet-core
+
+Global Exception Handling in ASP.NET Core - IExceptionHandler in .NET 8 [Recommended]
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\003-fluentvalidation-in-aspnet-core > TODO
+
+https://codewithmukesh.com/blog/fluentvalidation-in-aspnet-core
+
+How to use FluentValidation in ASP.NET Core - Super Powerful Validations
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\005-validation-with-mediatr-pipeline-behavior-and-fluentvalidation > TODO
+
+https://codewithmukesh.com/blog/validation-with-mediatr-pipeline-behavior-and-fluentvalidation
+
+Validation with MediatR Pipeline and FluentValidation
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\006-in-memory-caching-in-aspnet-core > TODO
+
+https://codewithmukesh.com/blog/in-memory-caching-in-aspnet-core
+
+In-Memory Caching in ASP.NET Core for Better Performance - A Comprehensive Guide
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\007-distributed-caching-in-aspnet-core-with-redis > TODO
+
+https://codewithmukesh.com/blog/distributed-caching-in-aspnet-core-with-redis
+
+Distributed Caching in ASP.NET Core with Redis - Ultimate Guide to Boost Response Times
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\008-response-caching-with-mediatr-in-aspnet-core > TODO
+
+https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core
+
+Response Caching with MediatR in ASP.NET Core - Powerful Pipeline Behavior
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\009-docker-essentials-for-dotnet-developers > TODO
+
+https://codewithmukesh.com/blog/docker-guide-for-dotnet-developers
+
+Docker Guide for .NET Developers - Step-by-Step Tutorial for Beginners
+
+https://codewithmukesh.com/blog/built-in-container-support-for-dotnet-7
+
+Built-In Container Support for .NET 7 - Dockerize .NET Applications without Dockerfile!
+
+
+[??-??-????]
+
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\010-aspnet-core-webapi-crud-with-entity-framework-core-full-course > TODO
+
+https://codewithmukesh.com/blog/aspnet-core-webapi-crud-with-entity-framework-core-full-course
+
+ASP.NET Core 9 Web API CRUD with Entity Framework Core - Full Course with DDD, Clean Code & Best Practices
