@@ -24,7 +24,7 @@ View CLEF (Compact Log Event Format) logs
 		seqcli ingest -i "C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\001-structured-logging-with-serilog-in-aspnet-core\Logs\log20250821.clef" --server http://localhost:5341
 
 
-[??-??-????]
+[21-08-2025]
 
 C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\002-global-exception-handling-in-aspnet-core > TODO
 

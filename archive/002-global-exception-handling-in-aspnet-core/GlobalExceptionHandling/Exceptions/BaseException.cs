@@ -2,12 +2,8 @@
 
 namespace GlobalExceptionHandling.Exceptions;
 
-public class BaseException : Exception
+public class BaseException(string message, HttpStatusCode statusCode = HttpStatusCode.InternalServerError)
+    : Exception(message)
 {
-    public HttpStatusCode StatusCode { get; }
-    public BaseException(string message, HttpStatusCode statusCode = HttpStatusCode.InternalServerError)
-        : base(message)
-    {
-        StatusCode = statusCode;
-    }
+    public HttpStatusCode StatusCode { get; } = statusCode;
 }

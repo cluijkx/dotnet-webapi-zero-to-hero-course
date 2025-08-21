@@ -14,20 +14,26 @@ public class ErrorHandlerMiddleware(RequestDelegate _next, ILogger<ErrorHandlerM
         }
         catch (Exception error)
         {
-            var response = context.Response;
+            HttpResponse response = context.Response;
             response.ContentType = "application/json";
             response.StatusCode = error switch
             {
                 BaseException e => (int)e.StatusCode,
-                _ => StatusCodes.Status500InternalServerError,
+                _ => StatusCodes.Status500InternalServerError
             };
-            var problemDetails = new ProblemDetails
+
+            ProblemDetails problemDetails = new()
             {
                 Status = response.StatusCode,
                 Title = error.Message,
+                Instance = context.Request.Path
             };
-            logger.LogError(error.Message);
-            var result = JsonSerializer.Serialize(problemDetails);
+
+            logger.LogError(error, "Unhandled exception of type {ExceptionType} at {Path}",
+                error.GetType().Name, context.Request.Path);
+
+            string result = JsonSerializer.Serialize(problemDetails);
+
             await response.WriteAsync(result);
         }
     }

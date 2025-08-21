@@ -2,10 +2,8 @@
 
 namespace GlobalExceptionHandling.Exceptions;
 
-public class ProductNotFoundException : BaseException
+public class ProductNotFoundException(Guid id)
+    : BaseException($"The product with id {id} is not found.", HttpStatusCode.NotFound)
 {
-    public ProductNotFoundException(Guid id)
-        : base($"product with id {id} not found", HttpStatusCode.NotFound)
-    {
-    }
+    public Guid ProductId { get; } = id;
 }
