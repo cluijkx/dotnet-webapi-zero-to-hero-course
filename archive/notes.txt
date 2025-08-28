@@ -83,7 +83,7 @@ Redis for distributed caching
 
 [28-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\008-response-caching-with-mediatr-in-aspnet-core > Commit TODO improved response caching example + additional refactoring
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\008-response-caching-with-mediatr-in-aspnet-core > Commit 7434ed4 improved response caching example + additional refactoring
 
 https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core
 
