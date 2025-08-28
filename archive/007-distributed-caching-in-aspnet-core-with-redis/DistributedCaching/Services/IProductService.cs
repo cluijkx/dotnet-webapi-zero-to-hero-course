@@ -4,7 +4,13 @@ namespace DistributedCaching.Services;
 
 public interface IProductService
 {
-    Task<Product> Get(Guid id);
-    Task<List<Product>> GetAll();
-    Task Add(ProductCreationDto product);
+    Task<bool> DeleteProduct(Guid id);
+
+    Task<List<ProductDto>> GetProducts();
+
+    Task<ProductDto?> GetProduct(Guid id);
+
+    Task<ProductDto?> AddProduct(ProductCreateDto request);
+
+    Task<ProductDto?> UpdateProduct(Guid id, ProductUpdateDto request);
 }

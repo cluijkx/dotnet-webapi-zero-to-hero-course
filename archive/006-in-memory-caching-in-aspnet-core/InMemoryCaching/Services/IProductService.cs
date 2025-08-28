@@ -4,9 +4,13 @@ namespace InMemoryCaching.Services;
 
 public interface IProductService
 {
-    Task<Product?> Get(Guid id);
+    Task<bool> DeleteProduct(Guid id);
 
-    Task<List<Product>> GetAll();
+    Task<List<ProductDto>> GetProducts();
 
-    Task Add(ProductCreationDto product);
+    Task<ProductDto?> GetProduct(Guid id);
+
+    Task<ProductDto?> AddProduct(ProductCreateDto request);
+
+    Task<ProductDto?> UpdateProduct(Guid id, ProductUpdateDto request);
 }

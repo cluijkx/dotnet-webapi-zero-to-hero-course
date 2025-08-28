@@ -5,10 +5,10 @@ GET {{InMemoryCaching_HostAddress}}/products
 Accept: application/json
 
 ### Get a single product by ID (replace with actual Guid)
-GET {{InMemoryCaching_HostAddress}}/products/9e9dbaaa-c915-4c25-8840-ae4f927f7651
+GET {{InMemoryCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
 Accept: application/json
 
-### Create a new product (valid case)
+### Create a new product (replace with valid or invalid data)
 POST {{InMemoryCaching_HostAddress}}/products
 Content-Type: application/json
 Accept: application/json
@@ -18,5 +18,20 @@ Accept: application/json
   "description": "Spooky Y",
   "price": 12345
 }
+
+### Update an existing product (replace with actual Guid)
+PUT {{InMemoryCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Phantom X",
+  "description": "Spooky Y",
+  "price": 54321
+}
+
+### Delete an existing product (replace with actual Guid)
+DELETE {{InMemoryCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
+Accept: application/json
 
 ###

@@ -1,4 +1,4 @@
-﻿using InMemoryCaching.Models;
+﻿using InMemoryCaching.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace InMemoryCaching.Persistence;

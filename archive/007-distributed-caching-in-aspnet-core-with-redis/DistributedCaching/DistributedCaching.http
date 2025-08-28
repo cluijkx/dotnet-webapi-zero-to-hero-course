@@ -1,6 +1,37 @@
-@InMemoryCaching_HostAddress = http://localhost:5021
+@DistributedCaching_HostAddress = http://localhost:5021
 
-GET {{InMemoryCaching_HostAddress}}/weatherforecast/
+### Get all products
+GET {{DistributedCaching_HostAddress}}/products
+Accept: application/json
+
+### Get a single product by ID (replace with actual Guid)
+GET {{DistributedCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
+Accept: application/json
+
+### Create a new product (replace with valid or invalid data)
+POST {{DistributedCaching_HostAddress}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Phantom X",
+  "description": "Spooky Y",
+  "price": 12345
+}
+
+### Update an existing product (replace with actual Guid)
+PUT {{DistributedCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Phantom X",
+  "description": "Spooky Y",
+  "price": 54321
+}
+
+### Delete an existing product (replace with actual Guid)
+DELETE {{DistributedCaching_HostAddress}}/products/45ee9e1e-2817-4a83-ae84-bac509cfc9bf
 Accept: application/json
 
 ###

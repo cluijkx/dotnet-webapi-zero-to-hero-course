@@ -53,27 +53,32 @@ Validation with MediatR Pipeline and FluentValidation
 
 [28-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\006-in-memory-caching-in-aspnet-core > Commit TODO improved in memory caching example
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\006-in-memory-caching-in-aspnet-core > Commit 94987fa improved in memory caching example
 
 https://codewithmukesh.com/blog/in-memory-caching-in-aspnet-core
 
 In-Memory Caching in ASP.NET Core for Better Performance - A Comprehensive Guide
 
-Create PostgreSQL database for in memory caching
+PostgreSQL database for in memory caching
 
 	Step 1. Download and Install PostgreSQL, visit https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
-	Step 2. Start pgAdmin, create database cache_db
-	Step 3. Run ef migrations or just start application, run 'Create Products.sql' using Query Tool afterwards
-	Step 4. Verify product data is present, run 'Select Products.sql' using Query Tool
+	Step 2. Run ef migrations or just start application, start check whether cache keys are and run 'Create Products.sql' using Query Tool
+	Step 3. Verify product data is present, from pgAdmin run 'Select Products.sql' using Query Tool
 
 
-[??-??-????]
+[28-08-=2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\007-distributed-caching-in-aspnet-core-with-redis > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\007-distributed-caching-in-aspnet-core-with-redis > Commit TODO improved distributed caching example + additional refactoring
 
 https://codewithmukesh.com/blog/distributed-caching-in-aspnet-core-with-redis
 
 Distributed Caching in ASP.NET Core with Redis - Ultimate Guide to Boost Response Times
+
+Redis for distributed caching
+
+	Step 1. Download and install Redis, visit https://www.memurai.com/get-memurai
+	Step 2. Download and Install Redis Insight, visit https://redis.io/insight
+	Step 3. Run application, start Redis Insight and check whether cache is used
 
 
 [??-??-????]

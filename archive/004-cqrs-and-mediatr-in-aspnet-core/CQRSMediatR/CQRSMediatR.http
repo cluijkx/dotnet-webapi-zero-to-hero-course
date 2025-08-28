@@ -8,7 +8,7 @@ Accept: application/json
 GET {{CQRSMediatR_HostAddress}}/products/9dc34ab6-cc9f-463f-923d-c408d858a2a7
 Accept: application/json
 
-### Create a new product
+### Create a new product (replace with valid or invalid data)
 POST {{CQRSMediatR_HostAddress}}/products
 Content-Type: application/json
 Accept: application/json
@@ -30,7 +30,7 @@ Accept: application/json
   "price": 46000
 }
 
-### Delete a product (replace with actual Guid)
+### Delete an existing product (replace with actual Guid)
 DELETE {{CQRSMediatR_HostAddress}}/products/9dc34ab6-cc9f-463f-923d-c408d858a2a7
 Accept: application/json
 

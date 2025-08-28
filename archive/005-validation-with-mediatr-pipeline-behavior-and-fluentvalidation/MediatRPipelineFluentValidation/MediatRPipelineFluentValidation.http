@@ -8,7 +8,7 @@ Accept: application/json
 GET {{MediatRPipelineFluentValidation_HostAddress}}/products/b0b4f9f1-39f6-44c0-b00c-a32ef57f2617
 Accept: application/json
 
-### Create a new product (valid case)
+### Create a new product (replace with valid or invalid data)
 POST {{MediatRPipelineFluentValidation_HostAddress}}/products
 Content-Type: application/json
 Accept: application/json
@@ -19,7 +19,7 @@ Accept: application/json
   "price": 45000
 }
 
-### Create a new product (invalid case - should trigger FluentValidation)
+### Create a new product (should trigger FluentValidation)
 POST {{MediatRPipelineFluentValidation_HostAddress}}/products
 Content-Type: application/json
 Accept: application/json
@@ -41,7 +41,7 @@ Accept: application/json
   "price": 46000
 }
 
-### Delete a product (replace with actual Guid)
+### Delete an existing product (replace with actual Guid)
 DELETE {{MediatRPipelineFluentValidation_HostAddress}}/products/b0b4f9f1-39f6-44c0-b00c-a32ef57f2617
 Accept: application/json
 
