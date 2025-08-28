@@ -3,17 +3,24 @@ using InMemoryCaching.Persistence;
 using InMemoryCaching.Services;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-                {
-                    options.UseNpgsql(builder.Configuration.GetConnectionString("dotnetSeries"));
-                });
+{
+    // Connect to a PostgreSQL database with Npgsql
+    options.UseNpgsql(builder.Configuration.GetConnectionString("dotnetSeries"));
+});
+
+// Cache Aside Pattern: In-Memory Caching > Data is cached within the server’s memory
 builder.Services.AddMemoryCache();
+
 builder.Services.AddTransient<IProductService, ProductService>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,21 +29,30 @@ if (app.Environment.IsDevelopment())
 
 app.MapGet("/products", async (IProductService service) =>
 {
-    var products = await service.GetAll();
+    List<Product> products = await service.GetAll();
+
     return Results.Ok(products);
 });
 
 app.MapGet("/products/{id:guid}", async (Guid id, IProductService service) =>
 {
-    var product = await service.Get(id);
+    Product? product = await service.Get(id);
+
+    if (product == null)
+    {
+        return Results.NotFound();
+    }
+
     return Results.Ok(product);
 });
 
 app.MapPost("/products", async (ProductCreationDto product, IProductService service) =>
 {
     await service.Add(product);
+
     return Results.Created();
 });
 
 app.UseHttpsRedirection();
+
 app.Run();

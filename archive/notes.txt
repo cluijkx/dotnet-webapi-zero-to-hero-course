@@ -51,13 +51,20 @@ https://codewithmukesh.com/blog/validation-with-mediatr-pipeline-behavior-and-fl
 Validation with MediatR Pipeline and FluentValidation
 
 
-[??-??-????]
+[28-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\006-in-memory-caching-in-aspnet-core > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\006-in-memory-caching-in-aspnet-core > Commit TODO improved in memory caching example
 
 https://codewithmukesh.com/blog/in-memory-caching-in-aspnet-core
 
 In-Memory Caching in ASP.NET Core for Better Performance - A Comprehensive Guide
+
+Create PostgreSQL database for in memory caching
+
+	Step 1. Download and Install PostgreSQL, visit https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+	Step 2. Start pgAdmin, create database cache_db
+	Step 3. Run ef migrations or just start application, run 'Create Products.sql' using Query Tool afterwards
+	Step 4. Verify product data is present, run 'Select Products.sql' using Query Tool
 
 
 [??-??-????]

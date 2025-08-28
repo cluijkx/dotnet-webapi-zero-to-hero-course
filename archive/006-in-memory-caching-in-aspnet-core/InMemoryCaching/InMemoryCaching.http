@@ -1,6 +1,22 @@
 @InMemoryCaching_HostAddress = http://localhost:5021
 
-GET {{InMemoryCaching_HostAddress}}/weatherforecast/
+### Get all products
+GET {{InMemoryCaching_HostAddress}}/products
 Accept: application/json
+
+### Get a single product by ID (replace with actual Guid)
+GET {{InMemoryCaching_HostAddress}}/products/9e9dbaaa-c915-4c25-8840-ae4f927f7651
+Accept: application/json
+
+### Create a new product (valid case)
+POST {{InMemoryCaching_HostAddress}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Phantom X",
+  "description": "Spooky Y",
+  "price": 12345
+}
 
 ###
