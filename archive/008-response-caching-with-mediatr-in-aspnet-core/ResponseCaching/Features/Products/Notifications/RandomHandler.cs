@@ -6,7 +6,9 @@ public class RandomHandler(ILogger<RandomHandler> logger) : INotificationHandler
 {
     public Task Handle(ProductCreatedNotification notification, CancellationToken cancellationToken)
     {
-        logger.LogInformation($"handling notification for product creation with id : {notification.Id}. performing random action.");
+        logger.LogInformation(
+            "Handling notification for product creation with id {ProductId}. Performing random action.", notification.Id);
+
         return Task.CompletedTask;
     }
 }

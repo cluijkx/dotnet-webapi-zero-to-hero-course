@@ -68,7 +68,7 @@ PostgreSQL database for in memory caching
 
 [28-08-=2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\007-distributed-caching-in-aspnet-core-with-redis > Commit TODO improved distributed caching example + additional refactoring
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\007-distributed-caching-in-aspnet-core-with-redis > Commit f068c47 improved distributed caching example + additional refactoring
 
 https://codewithmukesh.com/blog/distributed-caching-in-aspnet-core-with-redis
 
@@ -81,9 +81,9 @@ Redis for distributed caching
 	Step 3. Run application, start Redis Insight and check whether cache is used
 
 
-[??-??-????]
+[28-08-2025]
 
-C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\008-response-caching-with-mediatr-in-aspnet-core > TODO
+C:\Workspace\dotnet-webapi-zero-to-hero-course\archive\008-response-caching-with-mediatr-in-aspnet-core > Commit TODO improved response caching example + additional refactoring
 
 https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core
 

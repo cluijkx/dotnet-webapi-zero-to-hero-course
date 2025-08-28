@@ -10,7 +10,6 @@ using MediatRPipelineFluentValidation.Features.Products.Notifications;
 using MediatRPipelineFluentValidation.Features.Products.Queries.Get;
 using MediatRPipelineFluentValidation.Features.Products.Queries.List;
 using MediatRPipelineFluentValidation.Persistence;
-using Microsoft.AspNetCore.Components.Forms;
 using System.Reflection;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);

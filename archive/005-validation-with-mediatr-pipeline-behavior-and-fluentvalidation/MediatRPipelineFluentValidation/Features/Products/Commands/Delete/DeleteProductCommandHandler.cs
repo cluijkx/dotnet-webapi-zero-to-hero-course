@@ -1,5 +1,6 @@
 ﻿using MediatRPipelineFluentValidation.Persistence;
 using MediatR;
+using MediatRPipelineFluentValidation.Domain;
 
 namespace MediatRPipelineFluentValidation.Features.Products.Commands.Delete;
 
@@ -7,7 +8,7 @@ public class DeleteProductCommandHandler(AppDbContext context) : IRequestHandler
 {
     public async Task<bool> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
     {
-        Domain.Product? product = await context.Products.FindAsync([command.Id], cancellationToken: cancellationToken);
+        Product? product = await context.Products.FindAsync([command.Id], cancellationToken: cancellationToken);
 
         if (product is null)
         {

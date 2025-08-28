@@ -1,5 +1,6 @@
 ﻿using MediatR;
+using ResponseCaching.Features.Products.Dtos;
 
 namespace ResponseCaching.Features.Products.Commands.Create;
 
-public record CreateProductCommand(string Name, string Description, decimal Price) : IRequest<Guid>;
+public sealed record CreateProductCommand(string Name, string Description, decimal Price) : IRequest<ProductDto>;

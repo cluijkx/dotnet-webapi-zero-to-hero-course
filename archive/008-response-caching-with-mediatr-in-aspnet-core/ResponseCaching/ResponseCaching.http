@@ -1,6 +1,37 @@
-@CQRSMediatR_HostAddress = http://localhost:5197
+@ResponseCaching_HostAddress = http://localhost:5197
 
-GET {{CQRSMediatR_HostAddress}}/weatherforecast/
+### Get all products
+GET {{ResponseCaching_HostAddress}}/products
+Accept: application/json
+
+### Get a single product by ID (replace with actual Guid)
+GET {{ResponseCaching_HostAddress}}/products/e8375b7c-552d-4e5e-84fb-f5fde2fe5dfb
+Accept: application/json
+
+### Create a new product (replace with valid or invalid data)
+POST {{ResponseCaching_HostAddress}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Dell XPS 15",
+  "description": "Dell's high-performance laptop with a 4K InfinityEdge display",
+  "price": 1899.99
+}
+
+### Update an existing product (replace with actual Guid)
+PUT {{ResponseCaching_HostAddress}}/products/e8375b7c-552d-4e5e-84fb-f5fde2fe5dfb
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Dell XPS 15",
+  "description": "Dell's high-performance laptop with a 4K InfinityEdge display",
+  "price": 1999.99
+}
+
+### Delete an existing product (replace with actual Guid)
+DELETE {{ResponseCaching_HostAddress}}/products/e8375b7c-552d-4e5e-84fb-f5fde2fe5dfb
 Accept: application/json
 
 ###
