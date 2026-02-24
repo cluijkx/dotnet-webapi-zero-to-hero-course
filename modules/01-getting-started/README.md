@@ -1,0 +1,21 @@
+# Module 01: Getting Started with .NET Web API
+
+Master the fundamentals of .NET Web API development.
+
+## Course
+
+**[.NET Web API Zero to Hero](https://codewithmukesh.com/courses/dotnet-webapi-zero-to-hero/)** - The complete FREE course for .NET Web API development.
+
+## Lessons
+
+| Lesson | Code |
+|--------|------|
+| [REST Principles](https://codewithmukesh.com/blog/restful-api-best-practices-for-dotnet-developers/) | [Code](./restful-api-best-practices-for-dotnet-developers/) |
+| [File-Based Apps in .NET 10](https://codewithmukesh.com/blog/file-based-apps-dotnet-10/) | [Code](./file-based-apps/) |
+| [Minimal API Endpoints](https://codewithmukesh.com/blog/minimal-apis-aspnet-core/) | [Code](./minimal-apis-aspnet-core/) |
+| Middleware & Request Pipeline | Coming Soon |
+| Dependency Injection | Coming Soon |
+| Service Lifetimes | Coming Soon |
+| [Global Exception Handling](https://codewithmukesh.com/blog/global-exception-handling-in-aspnet-core/) | [Code](./global-exception-handling/) |
+| Structured Logging with Serilog | Coming Soon |
+| API Documentation | Coming Soon |
