@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using MovieApi.Api.DTOs;
 using MovieApi.Api.Persistence;
@@ -39,7 +38,7 @@ public static class MovieEndpoints
 
             if (after.HasValue)
             {
-                query = query.Where(m => m.Created < after.Value);
+                query = query.Where(m => m.Created > after.Value);
             }
 
             var items = await query

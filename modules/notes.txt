@@ -1,0 +1,45 @@
+[24-02-2026]
+
+02-database-management-with-ef-core\pagination-sorting-searching-aspnet-core-webapi > Commit HOLD pgadmin running from docker, fixed api database connection, added general improvements
+
+https://codewithmukesh.com/blog/pagination-sorting-searching-aspnet-core-webapi
+
+Pagination, Sorting & Searching in ASP.NET Core Web API
+
+D:\Workspace\dotnet-webapi-zero-to-hero-course\modules\02-database-management-with-ef-core\pagination-sorting-searching-aspnet-core-webapi
+
+1. Start PostgreSQL with Docker
+
+	docker compose up -d
+
+2. Restore NuGet Packages
+
+	dotnet restore
+	
+3. Run the application
+
+	dotnet run --project MovieApi.Api
+
+4. pgAdmin is avaliable at http://localhost:5050 (admin@admin.com, admin)
+
+	-- Offset pagination — gets slower as offset grows
+	SELECT *
+	FROM app."Movies"
+	WHERE "Title" ILIKE '%action%' OR "Genre" ILIKE '%action%'
+	ORDER BY "Rating" DESC, "Title" ASC, "Id" ASC
+	LIMIT 5 OFFSET 0;  -- page 1, pageSize 5
+	
+	-- Keyset pagination — constant speed regardless of position
+	SELECT *
+	FROM app."Movies"
+	WHERE "Created" > '2026-01-01T00:00:00Z'
+	ORDER BY "Created" ASC, "Id" ASC
+	LIMIT 10;
+
+5. Scalar UI for testing API is available at https://localhost:62635/scalar/v1
+
+	// Offset pagination — gets slower as offset grows
+	https://localhost:62635/api/movies?pageNumber=1&pageSize=5&sortBy=Rating desc,Title asc&search=action
+	
+	// Keyset pagination — constant speed regardless of position
+	https://localhost:62635/api/movies/cursor?after=2026-01-01T00:00:00Z&pageSize=10
